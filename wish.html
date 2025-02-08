@@ -263,7 +263,7 @@
     </style>
 </head>
 <body>
-    <audio id="birthdayMusic" src="Tum Hi Ho Ringtone Download- MobCup.Com.Co.mp3" loop="false" hidden="true" autostart="true"></audio>
+     <audio id="birthdayMusic" src="Tum Hi Ho.mp3" autoplay loop></audio>
 
     <div class="birthday-card">
         <div class="hearts">
@@ -350,6 +350,13 @@
                 setTimeout(() => firework.remove(), 1000);
             }
         }
+        window.addEventListener('load', () => {
+    const audio = document.getElementById('birthdayMusic');
+    audio.play().catch(() => {
+        console.log("Autoplay blocked. User interaction required.");
+    });
+});
+
     </script>
 </body>
 </html>
